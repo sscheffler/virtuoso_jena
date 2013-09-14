@@ -23,14 +23,16 @@
 
 package virtuoso.jena.driver;
 
-import java.sql.*;
-import java.util.*;
-import virtuoso.sql.*;
-import com.hp.hpl.jena.util.iterator.*;
-import com.hp.hpl.jena.shared.*;
-import com.hp.hpl.jena.graph.*;
-import com.hp.hpl.jena.datatypes.*;
-import com.hp.hpl.jena.rdf.model.*;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.NoSuchElementException;
+
+import com.hp.hpl.jena.graph.Node;
+import com.hp.hpl.jena.graph.Triple;
+import com.hp.hpl.jena.graph.TripleMatch;
+import com.hp.hpl.jena.shared.JenaException;
+import com.hp.hpl.jena.util.iterator.NiceIterator;
 
 
 public class VirtResSetIter extends NiceIterator<Triple>

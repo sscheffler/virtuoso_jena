@@ -23,12 +23,11 @@
 package virtuoso.jena.driver;
 
 
-import javax.sql.*;
-import com.hp.hpl.jena.graph.Graph;
+import javax.sql.ConnectionPoolDataSource;
+import javax.sql.DataSource;
+
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.impl.ModelCom;
-
-import virtuoso.jdbc3.VirtuosoDataSource;
 
 public class VirtModel extends ModelCom {
 

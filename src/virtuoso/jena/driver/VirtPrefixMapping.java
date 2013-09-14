@@ -23,17 +23,13 @@
 
 package virtuoso.jena.driver;
 
-import java.sql.*;
-import java.io.*;
-import java.util.*;
-import java.util.Iterator;
-
-import virtuoso.sql.*;
-
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.Iterator;
 import java.util.Map;
 
-import com.hp.hpl.jena.shared.*;
+import com.hp.hpl.jena.shared.JenaException;
 import com.hp.hpl.jena.shared.PrefixMapping;
 import com.hp.hpl.jena.shared.impl.PrefixMappingImpl;
 

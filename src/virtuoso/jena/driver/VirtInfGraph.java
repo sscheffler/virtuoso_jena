@@ -24,17 +24,19 @@
 package virtuoso.jena.driver;
 
 //import java.sql.*;
-import java.util.*;
+import java.util.Iterator;
 
-
-import com.hp.hpl.jena.graph.*;
+import com.hp.hpl.jena.graph.Graph;
+import com.hp.hpl.jena.graph.Node;
+import com.hp.hpl.jena.graph.Triple;
 import com.hp.hpl.jena.graph.compose.MultiUnion;
-import com.hp.hpl.jena.graph.impl.*;
-import com.hp.hpl.jena.shared.*;
-import com.hp.hpl.jena.util.iterator.*;
-import com.hp.hpl.jena.datatypes.*;
-import com.hp.hpl.jena.rdf.model.*;
-import com.hp.hpl.jena.reasoner.*;
+import com.hp.hpl.jena.reasoner.Derivation;
+import com.hp.hpl.jena.reasoner.InfGraph;
+import com.hp.hpl.jena.reasoner.Reasoner;
+import com.hp.hpl.jena.reasoner.ReasonerException;
+import com.hp.hpl.jena.reasoner.StandardValidityReport;
+import com.hp.hpl.jena.reasoner.ValidityReport;
+import com.hp.hpl.jena.util.iterator.ExtendedIterator;
 
 
 

@@ -22,18 +22,16 @@
  */
 package virtuoso.jena.driver;
 
-import java.sql.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Arrays;
-import java.util.ArrayList;
 
-
-import com.hp.hpl.jena.shared.*;
-import com.hp.hpl.jena.graph.*;
+import com.hp.hpl.jena.graph.GraphEvents;
+import com.hp.hpl.jena.graph.Node;
+import com.hp.hpl.jena.graph.Triple;
 import com.hp.hpl.jena.graph.impl.SimpleBulkUpdateHandler;
-import com.hp.hpl.jena.util.iterator.ExtendedIterator;
-import com.hp.hpl.jena.util.IteratorCollection;
+import com.hp.hpl.jena.shared.JenaException;
 
 
 public class VirtBulkUpdateHandler extends SimpleBulkUpdateHandler {

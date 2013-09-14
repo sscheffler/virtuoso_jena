@@ -24,10 +24,11 @@
 package virtuoso.jena.driver;
 
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.SQLException;
 
-import com.hp.hpl.jena.graph.impl.*;
-import com.hp.hpl.jena.shared.*;
+import com.hp.hpl.jena.graph.impl.TransactionHandlerBase;
+import com.hp.hpl.jena.shared.JenaException;
 
 public class VirtTransactionHandler extends TransactionHandlerBase {
 

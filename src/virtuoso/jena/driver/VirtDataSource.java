@@ -23,27 +23,23 @@
 package virtuoso.jena.driver;
 
 
-import java.sql.*;
+import java.sql.ResultSet;
 import java.util.Iterator;
-import java.util.Vector;
 import java.util.LinkedList;
 import java.util.List;
 
-import com.hp.hpl.jena.shared.*;
 import com.hp.hpl.jena.graph.Graph;
 import com.hp.hpl.jena.graph.Node;
 import com.hp.hpl.jena.graph.Triple;
 import com.hp.hpl.jena.query.DataSource;
-import com.hp.hpl.jena.query.Dataset;
 import com.hp.hpl.jena.query.LabelExistsException;
 import com.hp.hpl.jena.query.ReadWrite;
 import com.hp.hpl.jena.rdf.model.Model;
+import com.hp.hpl.jena.shared.JenaException;
 import com.hp.hpl.jena.shared.Lock;
 import com.hp.hpl.jena.sparql.core.DatasetGraph;
 import com.hp.hpl.jena.sparql.core.Quad;
 import com.hp.hpl.jena.sparql.util.Context;
-
-import virtuoso.jdbc3.VirtuosoDataSource;
 
 public class VirtDataSource extends VirtGraph implements DataSource {
 

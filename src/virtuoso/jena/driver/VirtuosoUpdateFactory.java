@@ -23,15 +23,6 @@
 
 package virtuoso.jena.driver;
 
-import java.util.List;
-
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
-import java.io.Reader;
-
-import com.hp.hpl.jena.update.*;
-import com.hp.hpl.jena.util.FileUtils;
 
 public class VirtuosoUpdateFactory
 {
