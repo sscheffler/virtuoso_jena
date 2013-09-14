@@ -339,7 +339,6 @@ public class VirtuosoQueryEngine extends QueryEngineMain
 
 	@Override
 	protected void requestCancel() {
-		// TODO Auto-generated method stub
 		super.cancel();
 	}
   
