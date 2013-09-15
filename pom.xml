@@ -3,14 +3,14 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>virtuoso.jena.driver</groupId>
 	<artifactId>virtuoso_jena_7</artifactId>
-	<version>1.0.0-RELEASE</version>
+	<version>1.0.1-SNAPSHOT</version>
 
 	<distributionManagement>
 		<!-- Publish the versioned releases here -->
 		<repository>
 			<id>releases</id>
 			<name>Releases</name>
-			<url>http://192.168.0.14:8081/nexus/content/repositories/releases/</url>	  
+			<url>http://192.168.0.14:8081/nexus/content/repositories/releases/</url>
 		</repository>
 
 		<!-- Publish the versioned releases here -->
@@ -47,21 +47,27 @@
 					<target>1.6</target>
 				</configuration>
 			</plugin>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id> <!-- this is used for inheritance merges -->
+						<phase>package</phase> <!-- bind to the packaging phase -->
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.4</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.easymock</groupId>
-			<artifactId>easymock</artifactId>
-			<version>3.2</version>
-			<scope>test</scope>
-		</dependency>
 		<dependency>
 			<groupId>org.apache.jena</groupId>
 			<artifactId>jena-fuseki</artifactId>
@@ -75,5 +81,5 @@
 			<version>1.0.0-RELEASE</version>
 		</dependency>
 	</dependencies>
-	
+
 </project>
